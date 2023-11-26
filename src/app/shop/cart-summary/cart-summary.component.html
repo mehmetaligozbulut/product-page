@@ -1,0 +1,18 @@
+<div class="alert alert-warning text-center">
+  <h4><i class="fa-solid fa-cart-shopping"></i> Alışveriş Sepeti</h4>
+  <ng-container *ngIf="productCartList.length > 0; else emptyProduct">
+    <span>
+      Sepetinizde {{ productCartList.length }} adet ürün bulunmaktadır. <br />
+      Toplam {{ (totalPrice$ | async)?.toFixed(2) }}
+      <i class="fa-solid fa-turkish-lira-sign"></i>
+      <br />
+      <button routerLink="/cart" class="btn btn-outline-primary mt-3">
+        Sepete Git
+      </button>
+    </span>
+  </ng-container>
+
+  <ng-template #emptyProduct>
+    <span>Sepetinizde henüz ürün yok!</span>
+  </ng-template>
+</div>

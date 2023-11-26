@@ -1,0 +1,27 @@
+<div class="navbar navbar-expand-lg navbar-dar bg-secondary-subtle fixed-top">
+  <div class="container">
+    <a routerLink="/product" class="navbar-brand"
+      ><img src="assets/img/migros-logo.png" width="200" alt=""
+    /></a>
+    <ul class="navbar-nav mr-auto">
+      <li class="navbar-nav">
+        <a routerLink="/product" class="nav-link cursor-p">Anasayfa</a>
+      </li>
+      <li class="navbar-nav">
+        <a routerLink="/cart" class="nav-link cursor-p">Alışveriş Sepeti</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="navbar-nav">
+        <a routerLink="/cart" class="nav-link active"
+          ><i class="fa-solid fa-cart-shopping fs-2"></i
+          ><span
+            id="item-count"
+            class="position-absolute translate-middle badge rounded-pill bg-danger"
+            >{{ (productCartList$ | async)?.length }}</span
+          ></a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

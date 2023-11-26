@@ -1,0 +1,101 @@
+<div class="container pt-100 mb-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="border-bottom pb-4 text-center">Alışveriş Sepetiniz</h1>
+    </div>
+    <div class="col-md-9 col-sm-12">
+      <ng-container *ngIf="productCartList.length > 0; else emptyItem">
+        <button class="btn btn-outline-primary" (click)="cart.clear()">
+          Sepeti Boşalt
+        </button>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Ürün</th>
+              <th>Fiyat</th>
+              <th>Miktar</th>
+              <th>Toplam</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of productCartList">
+              <td>
+                <img
+                  src="assets/img/{{ item.product.imageUrl }}"
+                  alt="{{ item.product.name }}"
+                  width="100"
+                />
+              </td>
+              <td>{{ item.product.name }}</td>
+              <td>{{ item.product.price.toFixed(2) }} TL</td>
+              <td>
+                <div class="form-group">
+                  <button
+                    class="btn btn-primary btn-sm"
+                    [ngClass]="{ disabled: item.quantity === 0 }"
+                    (click)="cart.removeItem(item.product)"
+                  >
+                    -
+                  </button>
+                  {{ item.quantity }}
+                  <button
+                    class="btn btn-primary btn-sm"
+                    (click)="cart.addItem(item.product)"
+                  >
+                    +
+                  </button>
+                </div>
+              </td>
+              <td>
+                {{ (item.quantity * item.product.price).toFixed(2) }}
+                <i class="fa-solid fa-turkish-lira-sign"></i>
+              </td>
+              <td>
+                <button
+                  class="btn btn-danger btn-sm"
+                  (click)="cart.removeProduct(item.product.id)"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-container>
+
+      <ng-template #emptyItem>
+        <div class="mt-4">
+          <h4>Sepetinizde ürün yok</h4>
+          <button routerLink="/product" class="btn btn-lg btn-outline-primary">
+            Alışverişe devam etmek için tıklayın
+          </button>
+        </div>
+      </ng-template>
+    </div>
+    <div class="col-md-3 col-sm-12 text-center">
+      <ng-container *ngIf="productCartList.length > 0">
+        <div>
+          <h4>Alışveriş Özeti</h4>
+        </div>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Toplam</th>
+              <td>
+                {{ (totalPrice$ | async)?.toFixed(2) }}
+                <i class="fa-solid fa-turkish-lira-sign"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button routerLink="/product" class="btn btn-outline-primary">
+          Alışverişe Devam Et
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</div>

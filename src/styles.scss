@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+.loader {
+  width: 5rem !important;
+  height: 5rem !important;
+  color: #ff7f00
+}
+.nav-link {
+  color: #ee6822 !important;
+  font-weight: bold !important;
+}
+.pt-100 {
+  padding-top: 100px;
+}
+
+.ml-3 {
+  margin-left: 8px
+}
+
+.cursor-p {
+  cursor: pointer
+}
+
+.btn-outline-primary {
+  color: #ff7f00 !important;
+  border-color: #ff7f00 !important;
+}
+
+.btn-outline-primary.active {
+  background-color: #ff7f00 !important;
+  color: #fff !important;
+}
+
+.btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #ff7f00 !important;
+}
+
+.btn-outline-primary:active {
+  color: #fff !important;
+  background-color: #ff7f00 !important;
+}
+
+.list-group-item.active {
+  background-color: #ff7f00 !important;
+  border-color: #ff7f00 !important;
+}
+
+.btn-primary {
+  background-color: #ff7f00 !important;
+    border-color: #ff7f00 !important;
+}
+
+.btn-primary:hover {
+  background-color: #e97705 !important;
+  border-color: #e97705 !important;
+}
