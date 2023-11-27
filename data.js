@@ -54,7 +54,7 @@ module.exports = () => {
         name: "Carte d'Or Barista Americano - Latte - Madagaskar",
         price: 89.90,
         imageUrl: 'dondurma2.jpg',
-        description: 'Description 6',
+        description: 'Description 7',
         category: 'Dondurma'
       },
       {
@@ -62,7 +62,7 @@ module.exports = () => {
         name: "Carte d'Or Selection Çikolata Karnavalı 800 ml",
         price: 92.50,
         imageUrl: 'dondurma3.jpg',
-        description: 'Description 6',
+        description: 'Description 8',
         category: 'Dondurma'
       },
       {
@@ -70,7 +70,7 @@ module.exports = () => {
         name: 'Algida Maraş Usulü Bol Kaymak 500 Ml',
         price: 74.90,
         imageUrl: 'dondurma4.jpg',
-        description: 'Description 6',
+        description: 'Description 9',
         category: 'Dondurma'
       },
       {
@@ -78,7 +78,7 @@ module.exports = () => {
         name: 'Migros İç Ceviz 150 G',
         price: 48.50,
         imageUrl: 'atistirmalik1.jpg',
-        description: 'Description 6',
+        description: 'Description 10',
         category: 'Atıştırmalık'
       },
       {
@@ -86,7 +86,7 @@ module.exports = () => {
         name: 'Nestle Damak Antep Fıstıklı Sütlü Kare Çikolata 60 G',
         price: 20.93,
         imageUrl: 'atistirmalik2.jpg',
-        description: 'Description 6',
+        description: 'Description 11',
         category: 'Atıştırmalık'
       },
     ],
